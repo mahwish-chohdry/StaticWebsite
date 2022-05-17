@@ -1,0 +1,78 @@
+.tablePadding {
+}
+.cardTile {
+  min-height: 73px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  background-color: #e9e6e6;
+  min-width: 165px;
+}
+.mat-row {
+  height: auto;
+}
+
+.mat-cell {
+  padding: 6px 6px 6px 0;
+}
+.dataCard {
+  min-height: 73px;
+  min-width: 162;
+  box-shadow: 0px 4px 15px rgb(0 0 0 / 25%);
+  border-radius: 12px;
+}
+.titleArea {
+  display: flex;
+  align-items: center;
+}
+.head {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  align-items: baseline;
+}
+.paggingData {
+  font-weight: 600;
+  font-size: 16px;
+  color: #585858;
+  margin-right: 5px;
+}
+.pageControl {
+  display: flex;
+  align-items: baseline;
+}
+.buttonCsv {
+  background: #ffd233;
+  border-radius: 12px;
+  border: none;
+  height: 45px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #2c3e50;
+}
+:host ::ng-deep .mat-form-field-flex {
+  background-color: white;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+:host ::ng-deep .mat-form-field-infix {
+  display: flex;
+  margin-top: -2px;
+  margin-bottom: 8px;
+  position: relative;
+  padding-right: 20px;
+  margin-left: 20px;
+  /* flex: auto; */
+  min-width: 0;
+  width: 90px;
+}
+.tableHead {
+  background-color: #524f4f;
+  color: #e9e6e6;
+}
+.range {
+  font-weight: 600;
+  font-size: 16px;
+  color: #585858;
+  margin-right: 5px;
+}

@@ -1,0 +1,50 @@
+<div
+  tabindex="0"
+  class="card mainSec {{ cardIndex }}"
+  (click)="cardClick()"
+  style=""
+>
+  <div class="card-body p-3 mainCard">
+    <div class="heading text-capitalize">
+      {{ cardTitle[0] }}
+    </div>
+    <div class="border"></div>
+    <ng-container *ngFor="let rows of dataArray; let i = index">
+      <div
+        [ngClass]="i == selectedRow ? 'SelectedrowCss' : ''"
+        [class.highlighted]="rows.status === btnStyle"
+        class="rowCss"
+        (click)="submit(cardTitle[0], rows.status, i)"
+      >
+        <span
+          class="row"
+          [ngClass]="
+            rows.status == 'Missing'
+              ? 'red'
+              : rows.status == 'ExpectedTomorrow'
+              ? 'blue'
+              : rows.status == 'SentToCustomer'
+              ? 'blue'
+              : 'black'
+          "
+        >
+          <div class="col-4">
+            <div class="numbers">
+              <span style="" class="text-sm mb-0 text-capitalize fontstyle">
+                {{ statusString(rows.status) }}
+              </span>
+            </div>
+          </div>
+          <div class="col-4">
+            <span class="mb-0 textCss">
+              {{ rows.total }}
+            </span>
+          </div>
+          <div class="col-4 text-end textCss">
+            {{ amounttext(rows.amount) }}
+          </div>
+        </span>
+      </div>
+    </ng-container>
+  </div>
+</div>

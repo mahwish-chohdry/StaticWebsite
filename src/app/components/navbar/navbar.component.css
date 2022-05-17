@@ -1,0 +1,114 @@
+.header {
+  background: linear-gradient(to bottom, 180deg, #ffffff 0%, #ebebeb 90.62%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-top: 10px;
+  margin-bottom: -5px;
+}
+
+.portal-type {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 51px;
+  color: #03344e;
+
+  margin: 1% 1%;
+}
+* {
+  font-weight: bold;
+}
+.honda-icon {
+  width: 197.32px;
+  height: 56px;
+}
+.buttontitle {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+button.mat-focus-indicator.buttontitle.mat-button.mat-button-base:focus {
+  font-weight: bold;
+}
+.boldtext {
+  font-weight: bold;
+}
+.loggedIn-user-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1% 1%;
+  width: 140px;
+}
+
+.loggedIn-user {
+  display: flex;
+  align-items: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 19px;
+  color: #000000;
+  white-space: pre-wrap;
+}
+.optionsCss {
+  display: flex;
+  justify-content: end;
+  align-items: baseline;
+  padding-right: 60px;
+}
+.navCss {
+  padding-left: 50px;
+  align-items: baseline;
+  display: flex;
+  justify-content: space-between;
+}
+.message {
+  font-weight: 500;
+}
+:host ::ng-deep .mat-form-field-outline-start {
+  border-radius: 28px 0 0 28px !important;
+  padding-bottom: 1%;
+}
+:host ::ng-deep .mat-form-field-outline-end {
+  border-radius: 0 28px 28px 0 !important;
+}
+:host ::ng-deep .mat-form-field-flex {
+  background-color: white !important;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+  border-radius: 20px !important;
+  padding: 0 5px 0 5px;
+  margin-left: 5px;
+}
+:host ::ng-deep .mat-select-arrow {
+  color: black;
+}
+:host ::ng-deep .mat-form-field.mat-focused.mat-accent .mat-select-arrow {
+  color: #000000 !important;
+}
+:host ::ng-deep .mat-select-placeholder {
+  font-weight: bold;
+  color: #000000;
+}
+:host ::ng-deep .mat-form-field-infix {
+  display: flex;
+  margin-top: -5px;
+  margin-bottom: 5px;
+  position: relative;
+  padding-right: 20px;
+  margin-left: 20px;
+  /* flex: auto; */
+  min-width: 0;
+  width: 130px;
+}
+::ng-deep .mat-form-field-underline {
+  display: none;
+}
+.user {
+  font-weight: 700;
+}
+
+.polygon {
+  width: 8px;
+  height: 8px;
+}

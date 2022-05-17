@@ -1,0 +1,206 @@
+<div class="head" style="">
+  <span class="titleArea">
+    <button (click)="expoertToCsv()" class="buttonCsv" style="">
+      Export to CSV
+    </button>
+  </span>
+  <div class="pageControl">
+    <div class="paggingData">Page 1 of 15 (200 Items)</div>
+    <div style="padding: 0px 25px">
+      <app-paginator></app-paginator>
+    </div>
+    <div>
+      <span class="range" style="">Page Size: </span>
+      <mat-form-field color="accent" class="dropDown" appearance="">
+        <mat-select [placeholder]="15" matInput>
+          <mat-option value="10"> 10 </mat-option>
+          <mat-option value="15"> 15 </mat-option>
+          <mat-option value="20"> 20 </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+</div>
+<table class="table table-striped" style="border-collapse: inherit">
+  <tr class="tableHead">
+    <ng-container *ngFor="let title of tableHeading">
+      <th style="">
+        {{ title }}
+        <!-- <div class="card cardTile">
+          <div class="card-body p-3" style="text-align: center">
+          </div>
+        </div> -->
+      </th>
+    </ng-container>
+    <!-- <th class="col-xl-2 tablePadding">
+      <div class="card cardTile">
+        <div class="card-body p-3">
+          <img src="../../../assets/listIcon.svg" alt=""> 
+          Account Number
+        </div>
+      </div>
+    </th>
+    <th class="col-xl-2 tablePadding">
+      <div class="card cardTile">
+        <div class="card-body p-3">
+         
+          billing Group Number
+        </div>
+      </div>
+    </th>
+    <th class="col-xl-2 tablePadding">
+      <div class="card cardTile">
+        <div class="card-body p-3">
+          
+          Invoice Amount
+        </div>
+      </div>
+    </th>
+    <th class="col-xl-2 tablePadding">
+      <div class="card cardTile">
+        <div class="card-body p-3">
+          
+          Invoice Date
+        </div>
+      </div>
+    </th>
+    <th class="col-xl-2 tablePadding">
+      <div class="card cardTile">
+        <div class="card-body p-3">
+          
+          Invoice Due Date
+        </div>
+      </div>
+    </th>
+    <th class="col-xl-2 tablePadding">
+      <div class="card cardTile">
+        <div class="card-body p-3">
+          
+          Invoice Number
+        </div>
+      </div>
+    </th>
+    <th class="col-xl-2 tablePadding">
+      <div class="card cardTile">
+        <div class="card-body p-3">
+          
+          Payment Method
+        </div>
+      </div>
+    </th>
+    <th class="col-xl-2 tablePadding">
+      <div class="card cardTile" style="">
+        <div class="card-body p-3">
+          
+          Payment Term
+        </div>
+      </div>
+    </th> -->
+  </tr>
+  <tbody>
+    <ng-container *ngFor="let datarow of displayData; let i = index">
+      <tr>
+        <ng-container *ngFor="let title of tableKeys">
+          <td
+            *ngIf="title !== 'paymentMethod' && title !== 'invoiceID'"
+            style="font-weight: bold"
+            class=""
+          >
+            {{ datarow[title] }}
+            <!-- <div class="card dataCard">
+            <div
+              class="card-body p-3"
+              style="text-align: center; font-weight: bold"
+            >
+            </div>
+          </div> -->
+          </td>
+        </ng-container>
+        <!-- <td class="col-xl-2">
+      <div
+        class="card"
+        style="
+          box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+          border-radius: 12px;
+        "
+      >
+        <div
+          class="card-body p-3"
+          style="text-align: center; font-weight: bold"
+        >
+          5433
+        </div>
+      </div>
+    </td> -->
+      </tr>
+    </ng-container>
+  </tbody>
+</table>
+<div class="head" style="">
+  <span class="titleArea">
+    <button (click)="expoertToCsv()" class="buttonCsv" style="">
+      Export to CSV
+    </button>
+  </span>
+  <div class="pageControl">
+    <div class="paggingData">Page 1 of 15 (200 Items)</div>
+    <div style="padding: 0px 25px">
+      <app-paginator></app-paginator>
+    </div>
+    <div>
+      <span class="range" style="">Page Size: </span>
+      <mat-form-field color="accent" class="dropDown" appearance="">
+        <mat-select [placeholder]="15" matInput>
+          <mat-option value="10"> 10 </mat-option>
+          <mat-option value="15"> 15 </mat-option>
+          <mat-option value="20"> 20 </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+</div>
+<!-- <div class="row" style="justify-content: space-evenly;">
+<div class="card col-xl-2" style="box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;">
+  <div class="card-body p-3">
+      <img src="../../../assets/listIcon.svg" alt="">
+      Invoice ID
+    
+  </div>
+</div>
+<div class="card col-xl-2" style="box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+border-radius: 12px;">
+  <div class="card-body p-3" style="text-align: center; font-weight: bold;">
+     5433
+    
+  </div>
+</div>
+<div class="card col-xl-2" style="box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+border-radius: 12px;">
+  <div class="card-body p-3" style="text-align: center; font-weight: bold;">
+     5433
+    
+  </div>
+</div>
+<div class="card col-xl-2" style="box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+border-radius: 12px;">
+  <div class="card-body p-3" style="text-align: center; font-weight: bold;">
+     5433
+    
+  </div>
+</div>
+<div class="card col-xl-2" style="box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+border-radius: 12px;">
+  <div class="card-body p-3" style="text-align: center; font-weight: bold;">
+     5433
+    
+  </div>
+</div>
+<div class="card col-xl-2" style="box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+border-radius: 12px;">
+  <div class="card-body p-3" style="text-align: center; font-weight: bold;">
+     5433
+    
+  </div>
+</div>
+</div> -->

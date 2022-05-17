@@ -1,0 +1,46 @@
+<div class="row header">
+  <div class="row col-12 navCss">
+    <div class="">
+      <button
+        (click)="buttonClick(1)"
+        tabindex="0"
+        mat-button
+        class="buttontitle {{ boldtext1 }}"
+      >
+        Invoice Reconciliation
+      </button>
+      |<button
+        (click)="buttonClick(2)"
+        tabindex="0"
+        class="buttontitle {{ boldtext2 }}"
+        mat-button
+      >
+        Performance Matrix
+      </button>
+    </div>
+
+    <div class="optionsCss">
+      Customer:
+      <mat-form-field color="accent" appearance="">
+        <mat-label>Select</mat-label>
+        <mat-select matInput>
+          <ng-container *ngFor="let customer of customerList">
+            <mat-option value="{{ customer.customerName }}">
+              {{ customer.customerName }}
+            </mat-option>
+          </ng-container>
+        </mat-select>
+      </mat-form-field>
+      <span style="margin-left: 40px; color: #272727">User:</span>
+
+      <mat-form-field color="accent" appearance="">
+        <mat-label style="font-weight: bold; color: black">{{
+          name
+        }}</mat-label>
+        <mat-select matInput>
+          <mat-option [routerLink]="['/login']"> Log Out </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+</div>
